@@ -50,8 +50,8 @@ const Header = () => {
     <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
       <div className="container d-flex align-items-center justify-content-between">
         <a href="#hero" className="logo d-flex align-items-center" onClick={closeMobileNav}>
-          <img src="/assets/img/logo.jpeg" alt="We Neighbour Logo" />
-          <span className="logo-text">We Neighbour</span>
+          <img src="/assets/img/No BG.png" alt="We Neighbour Logo" />
+          <span className="logo-text">WE NEIGHBOUR</span>
         </a>
 
         {/* Mobile Menu Toggle */}
@@ -68,7 +68,7 @@ const Header = () => {
         {/* Navbar */}
         <nav className={`navbar ${isMobileNavActive ? "mobile-nav-active" : ""}`} role="navigation">
           <ul>
-            {["Home", "About", "Features", "Team", "Contact"].map((item) => (
+            {["HOME", "ABOUT", "FEATURES", "TEAM", "CONTACT"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}

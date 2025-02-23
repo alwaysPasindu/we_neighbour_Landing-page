@@ -24,6 +24,15 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/nimesh-deepamal/",
       github: "https://github.com/nimesh-deepamal",
     },
+
+    {
+      name: "Pasindu Dilshan",
+      position: "Frontend Developer / DevOps Engineer",
+      image: "assets/img/team/pasindu.jpg",
+      description: "Bringing business strategies and innovation.",
+      linkedin: "https://www.linkedin.com/in/alwayspasindu/",
+      github: "https://github.com/alwaysPasindu",
+    },
     {
       name: "Sahan Randeepa",
       position: "Backend Developer",
@@ -32,14 +41,7 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/sahan-randeepa/",
       github: "https://github.com/sahanrandeepa",
     },
-    {
-      name: "Pasindu Dilshan",
-      position: "Entrepreneur",
-      image: "assets/img/team/pasindu.jpg",
-      description: "Bringing business strategies and innovation.",
-      linkedin: "https://www.linkedin.com/in/alwayspasindu/",
-      github: "https://github.com/alwaysPasindu",
-    },
+    
     {
       name: "Chamuditha Nonis",
       position: "Entrepreneur",

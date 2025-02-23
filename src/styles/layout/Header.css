@@ -30,16 +30,17 @@
 .header .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   line-height: 0;
   text-decoration: none;
 }
 
 .header .logo img {
-  max-height: 40px;
-  max-width: 60px;
+  max-height: 70px;
+  max-width: 70px;
   object-fit: contain;
-  margin-right: 6px;
+  /* margin-right: 6px; */
+  margin-top: 10px;
 }
 
 .header .logo .logo-text {
