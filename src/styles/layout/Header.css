@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  --heading-color: #333333;
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --heading-font: 'Arial', sans-serif;
+}
+
+/* Header Styles */
 .header {
   position: fixed;
   top: 0;
@@ -16,6 +26,7 @@
   backdrop-filter: blur(10px);
 }
 
+/* Logo Styles */
 .header .logo {
   display: flex;
   align-items: center;
@@ -31,18 +42,19 @@
   margin-right: 6px;
 }
 
-.header .logo span {
+.header .logo .logo-text {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
   color: var(--heading-color);
   font-family: var(--heading-font);
   margin-top: 3px;
+  white-space: normal; /* Allow text to wrap */
 }
 
+/* Navbar Styles */
 .navbar {
   padding: 0;
-  
 }
 
 .navbar ul {
@@ -51,17 +63,14 @@
   display: flex;
   list-style: none;
   align-items: center;
-  
 }
 
 .navbar ul li {
   padding: 2px 8px;
-  
 }
 
 .navbar li {
   position: relative;
-  
 }
 
 .navbar a,
@@ -83,7 +92,6 @@
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
-  
 }
 
 .navbar a:hover,
@@ -108,6 +116,7 @@
   background: var(--secondary-color);
 }
 
+/* Mobile Nav Toggle Button */
 .mobile-nav-toggle {
   display: none;
   color: var(--heading-color);
@@ -124,6 +133,28 @@
   color: var(--white);
 }
 
+/* Mobile Nav Overlay */
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+/* Mobile Nav Active State */
+.navbar.mobile-nav-active {
+  right: 0;
+}
+
+.mobile-nav-active .mobile-nav-overlay {
+  display: block;
+}
+
+/* Responsive Styles */
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -143,10 +174,6 @@
     overflow-y: auto;
     padding: 80px 0 0 0;
     margin-bottom: -5px;
-  }
-
-  .navbar.mobile-nav-active {
-    right: 0;
   }
 
   .navbar ul {
@@ -186,7 +213,15 @@
     max-width: 40px;
   }
 
-  .header .logo span {
+  .header .logo .logo-text {
     font-size: 18px;
+    white-space: normal; /* Ensure text wraps */
+    line-height: 1.2; /* Adjust line height for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo .logo-text {
+    font-size: 16px; /* Further reduce font size for very small screens */
   }
 }

@@ -26,12 +26,32 @@ const Header = () => {
     setIsMobileNavActive(false);
   };
 
+  // Function to handle smooth scrolling with offset
+  const handleLinkClick = (e, id) => {
+    e.preventDefault();
+    closeMobileNav(); // Close mobile nav on link click
+
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80; // Adjust this value based on your header height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
       <div className="container d-flex align-items-center justify-content-between">
         <a href="#hero" className="logo d-flex align-items-center" onClick={closeMobileNav}>
           <img src="/assets/img/logo.jpeg" alt="We Neighbour Logo" />
-          <span>We Neighbour</span>
+          <span className="logo-text">We Neighbour</span>
         </a>
 
         {/* Mobile Menu Toggle */}
@@ -50,7 +70,10 @@ const Header = () => {
           <ul>
             {["Home", "About", "Features", "Team", "Contact"].map((item) => (
               <li key={item}>
-                <a href={`#${item.toLowerCase()}`} onClick={closeMobileNav}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  onClick={(e) => handleLinkClick(e, item.toLowerCase())}
+                >
                   {item}
                 </a>
               </li>
