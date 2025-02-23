@@ -14,9 +14,9 @@ const Footer = () => {
             {/* Social Links */}
             <div className="social-links">
               <a href="https://twitter.com/weneighbour" className="twitter"><i className="bi bi-twitter"></i></a>
-              <a href="https://facebook.com/weneighbour" className="facebook"><i className="bi bi-facebook"></i></a>
-              <a href="https://instagram.com/weneighbour" className="instagram"><i className="bi bi-instagram"></i></a>
-              <a href="https://linkedin.com/company/weneighbour" className="linkedin"><i className="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com/p/We-Neighbour-61568788907715/" className="facebook"><i className="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/we_neighbour/profilecard/?igsh=MXFuM2k1MmtpbGh4ZA%3D%3D" className="instagram"><i className="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/we-neighbour/" className="linkedin"><i className="bi bi-linkedin"></i></a>
             </div>
           </div>
 
