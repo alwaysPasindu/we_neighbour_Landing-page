@@ -1,0 +1,96 @@
+/* Hero Section */
+.hero {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #007694bf 0%, #0000bf 100%);
+  color: #fff;
+  text-align: left;
+  margin-top: 100px;
+}
+.hero .container {
+  max-width: 1200px;
+}
+
+/* Text Section */
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 .highlight {
+  color: #ff4757;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  margin-top: 20px;
+}
+
+.hero-cta a {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-get-started {
+  background: #ff4757;
+  color: #fff;
+}
+
+.btn-learn-more {
+  background: #1e90ff;
+  color: #fff;
+}
+
+.btn-get-started:hover,
+.btn-learn-more:hover {
+  opacity: 0.8;
+}
+
+/* Image Section */
+.hero-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 20px;
+}
+
+.mockup {
+  position: relative;
+  width: 250px;
+  height: auto;
+  margin: 0 15px;
+}
+
+.app-screenshot {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.mockup:hover .app-screenshot {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+
+/* Secondary Image Style */
+.mockup.secondary {
+  transform: rotate(-10deg) translateX(-20px);
+  opacity: 0.9;
+}
+
+.mockup.secondary:hover {
+  transform: rotate(0deg) translateY(-10px);
+}

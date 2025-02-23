@@ -1,0 +1,182 @@
+.features {
+  padding: 80px 0;
+  background-color: var(--surface-color);
+}
+
+.features .section-title {
+  margin-bottom: 60px;
+}
+
+.features-item {
+  padding: 60px 0;
+  border-radius: 15px;
+  background: var(--white);
+  margin-bottom: 30px;
+  margin-top: 30px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.features-item:hover {
+  transform: translateY(-5px);
+}
+
+.features-item img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.5s ease;
+}
+
+.features-item:hover img {
+  transform: scale(1.05);
+}
+
+.features-item h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+}
+
+.features-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+/* Feature Cards */
+.feature-cards {
+  margin-top: 40px;
+}
+
+.feature-card {
+  padding: 30px;
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card .icon {
+  width: 60px;
+  height: 60px;
+  background: var(--surface-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.feature-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .features-item {
+    padding: 40px 0;
+  }
+
+  .features-item h3 {
+    font-size: 22px;
+  }
+
+  .feature-card {
+    padding: 25px;
+  }
+
+  .feature-card h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 0;
+  }
+
+  .features .section-title {
+    margin-bottom: 40px;
+  }
+
+  .features-item {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .features-item h3 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .features-item img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    margin-bottom: 30px;
+  }
+
+  .feature-card .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+  }
+}
+
+/* Animation Classes */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.5s ease;
+}
+
+.fade-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+}
+
+.fade-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}

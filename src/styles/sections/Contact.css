@@ -1,0 +1,148 @@
+/* General Section Styling */
+.contact-section {
+  background-color: #f4f8fc; /* Light blue background */
+  padding: 60px 20px;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #012970; /* Dark blue */
+}
+
+.contact-container p {
+  font-size: 18px;
+  color: #555555; /* Subtle grey */
+}
+
+/* Form Styling */
+.contact-form {
+  background-color: #ffffff; /* White background for form */
+  border-radius: 10px;
+  box-shadow: rgba(0,0,0,0.1) 0px 4px 12px; /* Subtle shadow */
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f9f9f9; /* Light grey background for inputs */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+   color:#aaa; /* Subtle placeholder color */
+   font-size:14px;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+   outline:none;
+   border-color:#4154f1; /* Subtle focus effect */
+}
+
+.contact-form textarea {
+   resize:none; /* Disable resizing */
+}
+
+/* Submit Button Styling */
+.submit-button {
+   background-color:#4154f1; 
+   color:#fff;
+   padding:.75rem ;
+   font-size:16px;
+   font-weight:bold;
+   border:none;
+   border-radius:.5rem;
+   cursor:pointer;
+   transition: background-color .3s ease, transform .3s ease; /* Smooth hover transition */
+}
+
+.submit-button:hover {
+   background-color:#012970; /* Darker shade on hover */
+   transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Status Message Styling */
+.status-message {
+   margin-bottom:.5rem; /* Space below status messages */
+}
+
+.loading {
+   color:#007bff; /* Blue for loading state */
+}
+
+.error-message {
+   color:#ff4d4d; /* Red for errors */
+}
+
+.sent-message {
+   color:#28a745; /* Green for success */
+}
+
+/* Contact Info Cards Styling */
+.contact-info-container {
+   display: flex; /* Flexbox for horizontal layout */
+   flex-wrap: wrap; /* Allow wrapping of cards */
+   justify-content: space-between; /* Space between cards */
+   margin-top:40px; /* Space above contact info section */
+}
+
+.contact-card {
+   background-color:#ffffff; /* White background for cards */
+   border-radius:10px; /* Rounded corners for cards */
+   box-shadow: rgba(0,0,0,0.1) 0px 4px 12px; /* Subtle shadow for depth */
+   padding:20px; /* Padding inside cards */
+   flex-basis: calc(48% - 10px); /* Two cards per row with spacing */
+   margin-bottom:20px; /* Space below each card */
+}
+
+.contact-card h3 {
+   font-size:24px;
+   color:#4154f1; /* Primary color for headings in cards */
+}
+
+.contact-card p {
+   font-size:16px;
+   color:#444444; /* Darker text for contact details in cards */
+}
+
+/* Responsive Adjustments */
+@media (max-width:768px) {
+   .contact-info-container {
+      flex-direction: column; /* Stack cards vertically on small screens */
+      align-items:center; /* Center align cards in column layout */
+      margin-top: 40px;
+   }
+
+   .contact-card {
+      flex-basis: calc(100% - 20px); /* Full width on small screens with spacing */
+      margin-bottom:15px; /* Reduce bottom margin on smaller screens */
+   }
+
+   .contact-container h2 {
+      font-size:32px; /* Adjust heading size for smaller screens */
+   }
+
+   .contact-container p,
+   .contact-card p,
+   .contact-card h3{
+      font-size:auto; 
+      line-height:auto;
+      margin:auto;
+      text-align:center ;
+      
+     
+     }
+}

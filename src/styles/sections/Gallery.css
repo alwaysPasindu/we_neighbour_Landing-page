@@ -1,0 +1,146 @@
+.gallery {
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.gallery-container {
+  padding: 15px 0;
+}
+
+.gallery-swiper {
+  padding: 15px 10px;
+}
+
+/* Ensure the gallery item resizes dynamically */
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image container should not crop the image */
+.gallery-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: auto; /* Keeps aspect ratio */
+  object-fit: contain; /* Ensures full image is visible */
+  border-radius: 8px;
+}
+
+/* Gallery info styling */
+.gallery-info {
+  text-align: center;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.gallery-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.gallery-info p {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Swiper Navigation */
+.gallery-swiper .swiper-button-next,
+.gallery-swiper .swiper-button-prev {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.gallery-swiper .swiper-button-next:hover,
+.gallery-swiper .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Swiper Pagination */
+.gallery-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.gallery-swiper .swiper-pagination-bullet-active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+  .gallery {
+    padding: 35px 0;
+  }
+
+  .gallery-img img {
+    max-height: 350px; /* Prevents image overflow */
+  }
+
+  .gallery-info h4 {
+    font-size: 15px;
+  }
+
+  .gallery-info p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-img img {
+    max-height: 300px;
+  }
+
+  .gallery-info {
+    padding: 10px;
+  }
+
+  .section-title h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery {
+    padding: 25px 0;
+  }
+
+  .gallery-img img {
+    max-height: 250px;
+  }
+
+  .section-title p {
+    font-size: 13px;
+  }
+
+  .gallery-info h4 {
+    font-size: 14px;
+  }
+
+  .gallery-info p {
+    font-size: 11px;
+  }
+}

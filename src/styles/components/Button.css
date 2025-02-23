@@ -1,0 +1,22 @@
+.btn-download {
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+}
+
+.btn-download i {
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+.btn-download:hover {
+  background: var(--heading-color);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+}

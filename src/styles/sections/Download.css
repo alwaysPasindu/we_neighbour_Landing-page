@@ -1,0 +1,164 @@
+.download {
+  padding: 80px 0;
+  background: var(--surface-color);
+}
+
+.download .section-title {
+  margin-bottom: 60px;
+}
+
+.download-content {
+  padding-right: 30px;
+}
+
+.download-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+}
+
+.download-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-store {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 12px;
+  background: var(--heading-color);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.btn-store:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow);
+  color: var(--white);
+}
+
+.btn-store.apple {
+  background: #000;
+}
+
+.btn-store.google {
+  background: #414141;
+}
+
+.btn-store i {
+  font-size: 32px;
+  margin-right: 12px;
+}
+
+.btn-store span {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.btn-store span strong {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+}
+
+.download-image {
+  position: relative;
+  text-align: center;
+}
+
+.download-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.download-image:hover img {
+  transform: translateY(-10px);
+}
+
+/* Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.download-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .download {
+    padding: 60px 0;
+  }
+
+  .download-content {
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .download-buttons {
+    justify-content: center;
+  }
+
+  .download-content h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-content h3 {
+    font-size: 24px;
+  }
+
+  .btn-store {
+    padding: 12px 25px;
+  }
+
+  .btn-store i {
+    font-size: 28px;
+  }
+
+  .btn-store span strong {
+    font-size: 14px;
+  }
+}
+
+/* Hover Effects */
+.download-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  border-radius: 15px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.download-content:hover::before {
+  opacity: 0.05;
+}
