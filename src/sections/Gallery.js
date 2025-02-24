@@ -15,7 +15,6 @@ const Gallery = () => {
     { image: "/assets/img/Screenshot 2024-11-20 at 03.24.30.png" },
     { image: "/assets/img/Screenshot 2024-11-20 at 03.24.05.png" },
     { image: "/assets/img/Screenshot 2024-11-20 at 03.25.48.png" },
-    { image: "/assets/img/Screenshot 2024-11-20 at 03.23.28.png" },
     { image: "/assets/img/Screenshot 2024-11-20 at 03.27.40.png" },
     { image: "/assets/img/Screenshot 2024-11-20 at 22.45.40.png" },
   ];

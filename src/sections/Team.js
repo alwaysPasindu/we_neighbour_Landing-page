@@ -24,7 +24,6 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/nimesh-deepamal/",
       github: "https://github.com/nimesh-deepamal",
     },
-
     {
       name: "Pasindu Dilshan",
       position: "Frontend Developer & DevOps Engineer",
@@ -36,25 +35,25 @@ const Team = () => {
     {
       name: "Sahan Randeepa",
       position: "Backend Developer",
-      image: "assets/img/testimonials/testimonials-3.jpg",
-      description: "Manages backend services and database.",
+      image: "assets/img/team/sahan.png",
+      description: "Manages backend services and databases. ",
       linkedin: "https://www.linkedin.com/in/sahan-randeepa/",
       github: "https://github.com/sahanrandeepa",
     },
-    
+   
     {
       name: "Chamuditha Nonis",
-      position: "Entrepreneur",
-      image: "assets/img/testimonials/testimonials-5.jpg",
-      description: "Focused on scaling business opportunities.",
+      position: "Frontend Developer & UI/UX Designer",
+      image: "assets/img/team/chamuditha.jpg",
+      description: "Designs user-friendly interfaces. Builds interactive front-end solutions.",
       linkedin: "https://www.linkedin.com/in/chamuditha-nonis-62aa20294/",
       github: "https://github.com/chamuditha6",
     },
     {
       name: "Sarani Dinethma",
       position: "UI/UX Designer & Frontend Developer",
-      image: "assets/img/testimonials/testimonials-2.jpg",
-      description: "Creating user-friendly designs.",
+      image: "assets/img/team/sarani.jpeg",
+      description: "Creates user-friendly and intuitive designs.",
       linkedin: "https://www.linkedin.com/in/sarani-dinethma/",
       github: "https://github.com/saranidinethma",
     },

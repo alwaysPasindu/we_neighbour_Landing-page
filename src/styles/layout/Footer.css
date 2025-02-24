@@ -1,5 +1,6 @@
 .footer {
-  background: linear-gradient(135deg, #007694bf 0%, #0000bf 100%);
+
+  background: linear-gradient(135deg, #007694 0%, #0000bf 100%);
   color: #f0f0f0; /* Softer white text for readability */
   padding: 30px 0;
   font-size: 14px;
@@ -33,11 +34,14 @@
 
 /* Footer Brand */
 .footer-brand .logo {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
-  color: #00d4ff;
+  color: #ffffff;
+  justify-content: center;
   text-decoration: none;
   transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 10px ;
+
 }
 
 .footer-brand .logo:hover {
@@ -60,7 +64,7 @@
   width: 40px;
   height: 40px;
   font-size: 16px;
-  color: #00d4ff;
+  color: #000000;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px); /* Glass effect */

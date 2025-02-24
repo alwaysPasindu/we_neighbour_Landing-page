@@ -5,54 +5,46 @@
 }
 
 .container {
-  max-width: 1140px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
-.row {
+.about-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  gap: 40px;
 }
 
-.colLeft {
+.about-content {
   flex: 1;
-  padding-right: 40px;
-}
-
-.colRight {
-  flex: 1;
-  padding-left: 40px;
-}
-
-.sectionTitle {
-  text-align: left;
   max-width: 600px;
 }
 
-.sectionTitle h3 {
+.section-title h3 {
   font-size: 18px;
   color: #4154f1;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
-.sectionTitle h2 {
+.section-title h2 {
   font-size: 36px;
   font-weight: bold;
   color: #012970;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-.sectionTitle p {
+.section-title p {
   font-size: 17px;
   color: #444;
   line-height: 1.8;
+  margin-bottom: 30px;
 }
 
-.btnReadMore {
+.btn-read-more {
   display: inline-block;
   padding: 12px 24px;
   background: #4154f1;
@@ -61,91 +53,130 @@
   font-weight: 500;
   border-radius: 6px;
   text-decoration: none;
-  margin-top: 20px;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.btnReadMore:hover {
+.btn-read-more:hover {
   background: #012970;
 }
 
-.infoGrid {
+.info-boxes {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
-.infoBox {
+.info-box {
   padding: 25px;
   background: #ffffff;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
-.infoBox:hover {
+.info-box:hover {
   transform: translateY(-8px);
 }
 
-.infoBox i {
+.info-box i {
   font-size: 40px;
   color: #4154f1;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
-.infoBox h3 {
+.info-box h3 {
   font-size: 20px;
   color: #012970;
   font-weight: 600;
+  margin-bottom: 12px;
 }
 
-.infoBox p {
+.info-box p {
   font-size: 15px;
   color: #555;
   line-height: 1.6;
+  margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .about {
-    padding: 80px 20px;
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .about-wrapper {
+    gap: 30px;
   }
 
-  .row {
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .info-box {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 40px 0;
+    margin-top: 60px;
+  }
+
+  .about-wrapper {
     flex-direction: column;
   }
 
-  .colLeft,
-  .colRight {
-    padding: 0;
-  }
-
-  .sectionTitle {
+  .about-content {
+    max-width: 100%;
     text-align: center;
   }
 
-  .infoGrid {
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .info-boxes {
     grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .about {
-    padding: 60px 15px;
-    margin-top: 100px
+    padding: 40px 0;
+    margin-top: 40px;
   }
 
-  .sectionTitle h2 {
-    font-size: 30px;
+  .container {
+    padding: 0 15px;
   }
 
-  .btnReadMore {
-    padding: 10px 20px;
+  .section-title h3 {
+    font-size: 16px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .section-title p {
     font-size: 15px;
   }
 
-  .infoBox {
-    padding: 20px;
+  .btn-read-more {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .info-box {
+    padding: 20px 15px;
+  }
+
+  .info-box h3 {
+    font-size: 18px;
+  }
+
+  .info-box p {
+    font-size: 14px;
   }
 }

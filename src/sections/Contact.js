@@ -30,18 +30,17 @@ const Contact = () => {
     });
 
     try {
-      // Use EmailJS to send the email
       const result = await emailjs.send(
-        'service_77cmnu7', // Replace with your Service ID
-        'template_24mblwy', // Replace with your Template ID
+        'service_ky6mb2h', 
+        'template_1kkbon4',
         {
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
           message: formData.message
         },
-        'CFc5kic4mVgc9A8ty' // Replace with your Public Key
-      );
+        'Eb2aClxbGJoiO3t2e'
+      );
 
       if (result.status === 200) {
         setStatus({
@@ -119,20 +118,20 @@ const Contact = () => {
         <div className="contact-info-container">
           <div className="contact-card">
             <h3>Address</h3>
-            <p>123 Community Street</p>
-            <p>New York, NY 10001</p>
+            <p>Colombo, Sri Lanka</p>
+            {/* <p>New York, NY 10001</p> */}
           </div>
 
           <div className="contact-card">
             <h3>Call Us</h3>
-            <p>+1 234 567 8900</p>
-            <p>+1 234 567 8901</p>
+            <p>+94 76 123 4567</p>
+            {/* <p>+1 234 567 8901</p> */}
           </div>
 
           <div className="contact-card">
             <h3>Email Us</h3>
-            <p>info@weneighbour.com</p>
-            <p>contact@weneighbour.com</p>
+            {/* <p>info@weneighbour.com</p> */}
+            <p>we.neighbour.live@gmail.com</p>
           </div>
 
           <div className="contact-card">

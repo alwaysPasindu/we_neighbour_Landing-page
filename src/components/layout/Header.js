@@ -1,13 +1,30 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/layout/Header.css";
+import "../../styles/layout/Header.css";  
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
+  const [activeLink, setActiveLink] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      // Handle header scroll state
+      setIsScrolled(window.scrollY > 50);
+      
+      // Handle active section tracking
+      const sections = document.querySelectorAll("section[id]");
+      let currentSection = "home";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      setActiveLink(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -15,71 +32,81 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isMobileNavActive ? "hidden" : "auto";
+    // Handle body scroll lock for mobile menu
+    if (isMobileNavActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   }, [isMobileNavActive]);
 
-  const toggleMobileNav = () => {
-    setIsMobileNavActive((prev) => !prev);
-  };
-
-  const closeMobileNav = () => {
-    setIsMobileNavActive(false);
-  };
-
-  // Function to handle smooth scrolling with offset
   const handleLinkClick = (e, id) => {
     e.preventDefault();
-    closeMobileNav(); // Close mobile nav on link click
+    setIsMobileNavActive(false);
+    setActiveLink(id);
 
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // Adjust this value based on your header height
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
   };
 
+  const navLinks = [
+    { id: "hero", label: "Home", icon: "🏠" },
+    { id: "about", label: "About", icon: "ℹ️" },
+    { id: "features", label: "Features", icon: "⭐" },
+    { id: "team", label: "Team", icon: "👥" },
+    { id: "contact", label: "Contact", icon: "📧" },
+  ];
+
   return (
     <header className={`header ${isScrolled ? "header-scrolled" : ""}`}>
-      <div className="container d-flex align-items-center justify-content-between">
-        <a href="#hero" className="logo d-flex align-items-center" onClick={closeMobileNav}>
-          <img src="/assets/img/No BG.png" alt="We Neighbour Logo" />
+      <div className="header-container">
+        <a href="#home" className="logo" onClick={(e) => handleLinkClick(e, "home")}>
+          <img src="/assets/img/No BG.png" alt="Logo" className="logo-img" />
           <span className="logo-text">WE NEIGHBOUR</span>
         </a>
 
-        {/* Mobile Menu Toggle */}
         <button
-          className={`mobile-nav-toggle bi ${isMobileNavActive ? "bi-x" : "bi-list"}`}
-          onClick={toggleMobileNav}
+          className={`mobile-nav-toggle ${isMobileNavActive ? "active" : ""}`}
+          onClick={() => setIsMobileNavActive(!isMobileNavActive)}
           aria-expanded={isMobileNavActive}
           aria-label="Toggle navigation"
-        ></button>
+        >
+          <span className="toggle-bar"></span>
+          <span className="toggle-bar"></span>
+          <span className="toggle-bar"></span>
+        </button>
 
-        {/* Mobile Menu Overlay */}
-        {isMobileNavActive && <div className="mobile-nav-overlay" onClick={closeMobileNav}></div>}
-
-        {/* Navbar */}
-        <nav className={`navbar ${isMobileNavActive ? "mobile-nav-active" : ""}`} role="navigation">
-          <ul>
-            {["HOME", "ABOUT", "FEATURES", "TEAM", "CONTACT"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  onClick={(e) => handleLinkClick(e, item.toLowerCase())}
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className={`nav-wrapper ${isMobileNavActive ? "active" : ""}`}>
+          <div 
+            className="nav-backdrop" 
+            onClick={() => setIsMobileNavActive(false)}
+          />
+          <nav className="navbar">
+            <ul className="nav-list">
+              {navLinks.map(({ id, label, icon }) => (
+                <li key={id} className="nav-item">
+                  <a
+                    href={`#${id}`}
+                    className={`nav-link ${activeLink === id ? "active" : ""}`}
+                    onClick={(e) => handleLinkClick(e, id)}
+                  >
+                    <span className="nav-icon">{icon}</span>
+                    <span className="nav-label">{label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   );
