@@ -59,11 +59,11 @@ const Header = () => {
   };
 
   const navLinks = [
-    { id: "hero", label: "Home", icon: "🏠" },
-    { id: "about", label: "About", icon: "ℹ️" },
-    { id: "features", label: "Features", icon: "⭐" },
-    { id: "team", label: "Team", icon: "👥" },
-    { id: "contact", label: "Contact", icon: "📧" },
+    { id: "hero", label: "HOME",  },
+    { id: "about", label: "ABOUT", },
+    { id: "features", label: "FEATURES",}, 
+    { id: "team", label: "TEAM",  },
+    { id: "contact", label: "CONTACT", },
   ];
 
   return (
