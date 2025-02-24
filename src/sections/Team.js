@@ -51,7 +51,7 @@ const Team = () => {
     },
     {
       name: "Sarani Dinethma",
-      position: "UI/UX Designer & Frontend Developer",
+      position: "Frontend Developer & UI/UX Designer",
       image: "assets/img/team/sarani.jpeg",
       description: "Creates user-friendly and intuitive designs.",
       linkedin: "https://www.linkedin.com/in/sarani-dinethma/",
