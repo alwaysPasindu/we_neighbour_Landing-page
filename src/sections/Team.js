@@ -22,7 +22,7 @@ const Team = () => {
       image: "assets/img/team/nimesh.png",
       description: "Handles both frontend and backend development.",
       linkedin: "https://www.linkedin.com/in/nimesh-deepamal/",
-      github: "https://github.com/nimesh-deepamal",
+      github: "https://github.com/NimeshDeepamal",
     },
     {
       name: "Pasindu Dilshan",
