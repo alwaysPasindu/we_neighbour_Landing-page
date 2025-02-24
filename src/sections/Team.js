@@ -26,7 +26,7 @@ const Team = () => {
     },
     {
       name: "Pasindu Dilshan",
-      position: "Frontend Developer & DevOps Engineer",
+      position: "Full-stack Developer & DevOps Engineer",
       image: "assets/img/team/pasindu.jpg",
       description: "Manages project workflows and deployments. Ensures smooth execution.",
       linkedin: "https://www.linkedin.com/in/alwayspasindu/",
