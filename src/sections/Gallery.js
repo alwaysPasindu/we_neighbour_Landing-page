@@ -9,14 +9,14 @@ import "../styles/sections/Gallery.css";
 
 const Gallery = () => {
   const galleryItems = [
-    { image: "/assets/img/Screenshot 2024-11-20 at 03.27.07.png" },
-    { image: "/assets/img/Screenshot 2024-11-20 at 03.27.07 2.png" },
-    { image: "/assets/img/Screenshot 2024-11-20 at 03.25.54.png" },
-    { image: "/assets/img/Screenshot 2024-11-20 at 03.24.30.png" },
-    { image: "/assets/img/Screenshot 2024-11-20 at 03.24.05.png" },
-    { image: "/assets/img/Screenshot 2024-11-20 at 03.25.48.png" },
-    { image: "/assets/img/Screenshot 2024-11-20 at 03.27.40.png" },
-    { image: "/assets/img/Screenshot 2024-11-20 at 22.45.40.png" },
+    { image: "/assets/img/ss/1.png" },
+    { image: "/assets/img/ss/2.png" },
+    { image: "/assets/img/ss/3.png" },
+    { image: "/assets/img/ss/4.png" },
+    { image: "/assets/img/ss/5.png" },
+    { image: "/assets/img/ss/6.png" },
+    { image: "/assets/img/ss/7.png" },
+    { image: "/assets/img/ss/8.png" },
   ];
 
   return (

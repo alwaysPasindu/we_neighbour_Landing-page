@@ -44,7 +44,7 @@ const Team = () => {
     {
       name: "Chamuditha Nonis",
       position: "Frontend Developer & UI/UX Designer",
-      image: "assets/img/team/chamuditha.jpg",
+      image: "assets/img/team/chamuditha3.png",
       description: "Designs user-friendly interfaces. Builds interactive front-end solutions.",
       linkedin: "https://www.linkedin.com/in/chamuditha-nonis-62aa20294/",
       github: "https://github.com/chamuditha6",
