@@ -31,7 +31,7 @@ const Hero = () => {
                   Google Play
                 </span>
               </a>
-              <a href="#" className="cta-button cta-secondary">
+              <a href="https://play.google.com/store/apps/details?id=we.neighbour.sdgp.com&pli=1" className="cta-button cta-secondary">
                 <i className="bi bi-apple"></i>
                 <span>
                   {/* <small>Download on</small> */}
