@@ -24,14 +24,14 @@ const Hero = () => {
               your neighborhood a better place to live.
             </p>
             <div className="hero-cta">
-              <a href="#" className="cta-button cta-primary">
+              <a href="https://play.google.com/store/apps/details?id=we.neighbour.sdgp.com&pli=1" className="cta-button cta-primary">
                 <i className="bi bi-google-play"></i>
                 <span>
                   {/* <small>Get it on</small> */}
                   Google Play
                 </span>
               </a>
-              <a href="https://play.google.com/store/apps/details?id=we.neighbour.sdgp.com&pli=1" className="cta-button cta-secondary">
+              <a href="#" className="cta-button cta-secondary">
                 <i className="bi bi-apple"></i>
                 <span>
                   {/* <small>Download on</small> */}
